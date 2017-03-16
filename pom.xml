@@ -9,7 +9,7 @@
     <name>struts2-jetty-demo</name>
 
     <properties>
-        <struts2.version>2.3.18-SNAPSHOT</struts2.version>
+        <struts2.version>2.3.24</struts2.version>
     </properties>
 
     <dependencies>
