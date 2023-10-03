@@ -20,7 +20,7 @@
 <s:form theme="simple" id="itemAdd" name="itemAdd" action="invoice" method="post">
   <tr>
     <td class="evenRow">
-      <sx:datetimepicker id="createDate" displayFormat="%{getText('dateFormat')}" name="invoiceItem.createDate"/>
+      <sx:datetimepicker id="createDate" name="invoiceItem.createDate"/>
     </td>
     <td class="evenRow">
       <s:submit align="left" value="Save"/>

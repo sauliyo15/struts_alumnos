@@ -3,7 +3,17 @@
 <!DOCTYPE struts PUBLIC
         "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd">
+
 <struts>
-    <constant name="struts.ui.theme" value="xhtml" />
-    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="xhtml"/>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="org.demo.actions" namespace="/" extends="struts-default">
+
+        <action name="requestInput" class="org.demo.actions.InvoiceAction" method="execute">
+            <result>/result.jsp</result>
+        </action>
+
+    </package>
+
 </struts>
