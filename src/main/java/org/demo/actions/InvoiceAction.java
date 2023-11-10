@@ -20,4 +20,10 @@ public class InvoiceAction extends ActionSupport  {
     public void setInvoiceBean(InvoiceBean invoiceBean) {
         this.invoiceBean = invoiceBean;
     }
+    @Override
+    public void validate() {
+        if (invoiceBean.getSubject().isEmpty()) {
+            addFieldError("invoiceBean.subject", "El concepto es obligatorio.");
+        }
+    }
 }
