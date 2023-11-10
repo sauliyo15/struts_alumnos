@@ -13,22 +13,34 @@
 
 
 
-<s:form theme="simple">
-  <h1><s:text name="form.tittle.message"/></h1>
-  <s:textfield name="fname"/>
-  <sx:datetimepicker name="test"/>
-</s:form>
-
-
 <s:form theme="simple" id="itemAdd" name="itemAdd" action="invoice" method="post">
+  <h1><s:text name="form.tittle.message"/></h1>
+  <table>
+  <tr>
+      <td class="evenRow">
+        <s:text name="form.subject.message"/>
+        <s:textfield id="fname" name="invoiceBean.subject"/>
+      </td>
+    </tr>
+  <tr>
+      <td class="evenRow">
+        <s:text name="form.fromDate.message"/>
+        <sx:datetimepicker id="dateFrom" name="invoiceBean.dateFrom"/>
+      </td>
+    </tr>
   <tr>
     <td class="evenRow">
-      <sx:datetimepicker id="createDate" name="invoiceItem.createDate"/>
+       <s:text name="form.toDate.message"/>
+       <sx:datetimepicker id="dateTo" name="invoiceBean.dateTo"/>
     </td>
+
+  </tr>
+  <tr>
     <td class="evenRow">
-      <s:submit align="left" value="Enviar"/>
+        <s:submit align="left" value="Enviar"/>
     </td>
   </tr>
+  </table>
 </s:form>
 
 </body>

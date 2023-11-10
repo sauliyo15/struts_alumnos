@@ -11,7 +11,7 @@
 
 <body>
 
-    <h1>Hello!!</h1>
+    <h1>Resumen de factura: </h1>
 
 </body>
 </html>
