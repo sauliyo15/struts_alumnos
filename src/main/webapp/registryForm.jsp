@@ -11,7 +11,10 @@
 
 <body>
 
+
+
 <s:form theme="simple">
+  <h1><s:text name="form.tittle.message"/></h1>
   <s:textfield name="fname"/>
   <sx:datetimepicker name="test"/>
 </s:form>
@@ -23,7 +26,7 @@
       <sx:datetimepicker id="createDate" name="invoiceItem.createDate"/>
     </td>
     <td class="evenRow">
-      <s:submit align="left" value="Save"/>
+      <s:submit align="left" value="Enviar"/>
     </td>
   </tr>
 </s:form>

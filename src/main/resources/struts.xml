@@ -10,9 +10,15 @@
 
     <package name="org.demo.actions" namespace="/" extends="struts-default">
 
-        <action name="requestInput" class="org.demo.actions.InvoiceAction" method="execute">
-            <result>/result.jsp</result>
+        <action name="registry" class="org.demo.actions.RegistryAction" method="execute">
+            <result name="success">registryForm.jsp</result>
         </action>
+
+        <action name="invoice" class="org.demo.actions.InvoiceAction" method="execute">
+            <result name="success">wellcome.jsp</result>
+        </action>
+
+
 
     </package>
 
