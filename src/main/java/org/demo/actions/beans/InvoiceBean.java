@@ -3,10 +3,18 @@ package org.demo.actions.beans;
 import java.util.Date;
 
 public class InvoiceBean {
-
     private String subject;
     private Date dateFrom;
     private Date dateTo;
+    private double price;
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
 
     public Date getDateFrom() {
         return dateFrom;
@@ -24,11 +32,15 @@ public class InvoiceBean {
         this.dateTo = dateTo;
     }
 
-    public String getSubject() {
-        return subject;
+    public double getPrice() {return price; }
+
+    public void setPrice(double price) { this.price = price; }
+
+    public double getTaxes() {
+        return price * 0.21;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public double getTotal() {
+        return price * 1.21;
     }
 }

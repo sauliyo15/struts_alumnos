@@ -22,8 +22,32 @@ public class InvoiceAction extends ActionSupport  {
     }
     @Override
     public void validate() {
+
+        boolean chequearFecha = true;
+
         if (invoiceBean.getSubject().isEmpty()) {
             addFieldError("invoiceBean.subject", "El concepto es obligatorio.");
+        }
+
+        if (invoiceBean.getDateFrom() == null) {
+            chequearFecha = false;
+            addFieldError("invoiceBean.dateFrom", "La fecha de inicio es obligatoria.");
+        }
+
+        if (invoiceBean.getDateTo() == null) {
+            chequearFecha = false;
+            addFieldError("invoiceBean.dateTo", "La fecha de fin es obligatoria.");
+        }
+
+        if (chequearFecha) {
+            if (invoiceBean.getDateFrom().compareTo(invoiceBean.getDateTo()) > 0) {
+                addFieldError("invoiceBean.dateTo", "La fecha de fin debe ser igual o mayor que la fecha de inicio.");
+            }
+        }
+
+        System.out.println(invoiceBean.getPrice());
+        if (invoiceBean.getPrice() <= 0.0) {
+            addFieldError("invoiceBean.price", "El precio debe ser mayor que 0.");
         }
     }
 }
