@@ -13,7 +13,7 @@ public class Index extends ActionSupport {
     private String redirectName;
 
     public String execute() {
-        redirectName = "registry";
+        redirectName = "principal";
         return Action.SUCCESS;
     }
 

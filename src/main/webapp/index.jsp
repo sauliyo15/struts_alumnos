@@ -1,1 +1,1 @@
-<% response.sendRedirect("registryForm"); %>
+<% response.sendRedirect("principalForm"); %>
