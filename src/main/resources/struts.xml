@@ -10,17 +10,25 @@
 
     <package name="org.demo.actions" namespace="/" extends="struts-default">
 
-        <action name="principal" class="org.demo.actions.PrincipalAction" method="execute">
+        <action name="principal" class="org.demo.actions.Principal" method="execute">
             <result name="success">principalForm.jsp</result>
         </action>
 
-        <action name="invoice" class="org.demo.actions.InvoiceAction" method="execute">
-            <result name="success">wellcome.jsp</result>
-            <param name="invoiceBean"  />
+        <action name="buscar" class="org.demo.actions.Buscar" method="execute">
+            <result name="success">informacion.jsp</result>
             <result name="input">principalForm.jsp</result>
+            <result name="error">principalForm.jsp</result>
         </action>
 
+        <action name="registro" class="org.demo.actions.Registro" method="execute">
+            <result name="success">registerForm.jsp</result>
+        </action>
 
+        <action name="registrar" class="org.demo.actions.Registrar" method="execute">
+            <result name="success">registerForm.jsp</result>
+            <result name="input">registerForm.jsp</result>
+            <result name="error">registerForm.jsp</result>
+        </action>
 
     </package>
 

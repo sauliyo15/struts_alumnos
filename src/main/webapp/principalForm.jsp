@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,18 +13,17 @@
 <h2><s:text name="welcome.message"/></h2>
 <h3><s:text name="options.message"/></h3>
 
-<s:form theme="simple" id="itemAdd" name="itemAdd" action="invoice" method="post" validate="true">
+<a href="registro.action"><s:text name="form.message"/></a>
+<br>
+<br>
+<s:form theme="simple" name="dni" action="buscar" method="post" validate="true">
   <table>
     <tr>
         <td class="evenRow">
-            <s:text name="form.subject.message"/>
-            <s:textfield id="subject" name="invoiceBean.subject"/>
-            <s:fielderror fieldName = "invoiceBean.subject" />
-        </td>
-    </tr>
-    <tr>
-        <td class="evenRow">
-            <s:submit align="left" value="Enviar"/>
+            <s:text name="dni.message"/>
+            <s:textfield id="dni" name="dni"/>
+            <s:submit align="left" value="%{getText('button.search')}"/>
+            <s:fielderror fieldName = "dni" />
         </td>
     </tr>
   </table>
